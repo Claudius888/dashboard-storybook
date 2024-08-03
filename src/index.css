@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --12-regular-font-family: 'Inter', Helvetica;
+  --12-regular-font-size: 12px;
+  --12-regular-font-style: normal;
+  --12-regular-font-weight: 400;
+  --12-regular-letter-spacing: 0px;
+  --12-regular-line-height: 18px;
+  --14-regular-font-family: 'Inter', Helvetica;
+  --14-regular-font-size: 14px;
+  --14-regular-font-style: normal;
+  --14-regular-font-weight: 400;
+  --14-regular-letter-spacing: 0px;
+  --14-regular-line-height: 20px;
+  --14-semibold-font-family: 'Inter', Helvetica;
+  --14-semibold-font-size: 14px;
+  --14-semibold-font-style: normal;
+  --14-semibold-font-weight: 600;
+  --14-semibold-letter-spacing: 0px;
+  --14-semibold-line-height: 20px;
+  --24-regular-font-family: 'Inter', Helvetica;
+  --24-regular-font-size: 24px;
+  --24-regular-font-style: normal;
+  --24-regular-font-weight: 400;
+  --24-regular-letter-spacing: 0px;
+  --24-regular-line-height: 36px;
+  --24-semibold-font-family: 'Inter', Helvetica;
+  --24-semibold-font-size: 24px;
+  --24-semibold-font-style: normal;
+  --24-semibold-font-weight: 600;
+  --24-semibold-letter-spacing: 0px;
+  --24-semibold-line-height: 36px;
+  --black-100: rgba(28, 28, 28, 1);
+  --black-80: rgba(28, 28, 28, 0.8);
+  --corner-radius-12-duplicate: 12px;
+  --corner-radius-16-duplicate: 16px;
+  --corner-radius-24: 24px;
+  --corner-radius-4-duplicate: 4px;
+  --corner-radius-8: 8px;
+  --corner-radius-80: 80px;
+  --icon-size-28-duplicate: 28px;
+  --show-icon-show-icon: initial;
+  --show-text-show-text: initial;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24-duplicate: 24px;
+  --spacing-28: 28px;
+  --spacing-4: 4px;
+  --spacing-40: 40px;
+  --spacing-48: 48px;
+  --spacing-8-duplicate: 8px;
+  --spacing-radius-8: 8px;
+  --spacing-size-20: 20px;
+  --spacing-size-28: 28px;
+  --themes-black-10: rgba(28, 28, 28, 0.1);
+  --themes-black-100: rgba(28, 28, 28, 1);
+  --themes-black-20: rgba(28, 28, 28, 0.2);
+  --themes-black-40: rgba(125, 125, 125, 1);
+  --themes-black-5: rgba(28, 28, 28, 0.05);
+  --themes-primary-blue: rgba(227, 245, 255, 1);
+  --themes-primary-brand: rgba(28, 28, 28, 1);
+  --themes-primary-light: rgba(247, 249, 251, 1);
+  --themes-primary-purple: rgba(229, 236, 246, 1);
+  --themes-secondary-blue: rgba(177, 227, 255, 1);
+  --themes-secondary-cyan: rgba(168, 197, 218, 1);
+  --themes-secondary-green: rgba(161, 227, 203, 1);
+  --themes-secondary-indigo: rgba(149, 164, 252, 1);
+  --themes-secondary-mint: rgba(186, 237, 189, 1);
+  --themes-white-100: rgba(255, 255, 255, 1);
+  --themes-white-40: rgba(255, 255, 255, 0.4);
+  --white-100: rgba(255, 255, 255, 1);
+  --themes-card-dark: "#272727";
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
