@@ -3,8 +3,9 @@ import './statcard.css';
 import { cn } from '../lib/utils';
 import PointSVG from './PointSVG';
 import { Line, LineChart, ResponsiveContainer, XAxis, YAxis } from 'recharts';
+import Card from './Card';
 
-type dataProps = { [key: string]: string | number }[]
+export type dataProps = { [key: string]: string | number }[];
 
 export interface UserChartProps {
   /**
@@ -29,8 +30,6 @@ function Filters({ isLight }: { isLight: boolean }) {
   const [selectedFilter, setselectedFilter] = useState<
     'Total Users' | 'Total Projects' | 'Operating Status' | string
   >('Total Users');
-  const activeColors = isLight ? 'primary-brand' : 'primary-purple';
-  const themeText = isLight ? 'black-100' : 'white-100';
 
   return (
     <span className='flex flex-row font-medium gap-2'>
@@ -42,7 +41,7 @@ function Filters({ isLight }: { isLight: boolean }) {
               className={cn(
                 'text-sm',
                 selectedFilter == item
-                  ? `text-themes-${activeColors}`
+                  ? `${isLight ? 'text-themes-primary-brand' : 'text-themes-primary-purple'}`
                   : 'text-themes-black-40'
               )}
               onClick={() => setselectedFilter(item)}
@@ -58,15 +57,15 @@ function Filters({ isLight }: { isLight: boolean }) {
       <span
         className={cn(
           'flex flex-row gap-5 text-xs items-end font-normal',
-          `text-themes-${themeText}`
+          `${isLight ? 'text-themes-black-100' : 'text-themes-white-100'}`
         )}
       >
         <span className='flex flex-row items-center gap-2'>
-          <PointSVG fill='primary-brand' />
+          <PointSVG fill='primary-brand' className={`${isLight ? 'fill-themes-primary-brand' : 'fill-themes-secondary-indigo'}`}/>
           This Year
         </span>
         <span className='flex flex-row items-center gap-2'>
-          <PointSVG fill='secondary-cyan' />
+          <PointSVG fill='secondary-cyan'  className='fill-themes-secondary-cyan'/>
           Last Year
         </span>
       </span>
@@ -112,18 +111,11 @@ function DataLineChart({ data }: { data: dataProps }) {
 
 export function UserChart({ backgroundColor, data }: UserChartProps) {
   const isLight = backgroundColor == 'light';
-  const bg_color = isLight ? 'bg-themes-primary-light' : 'bg-themes-dark-card';
 
   return (
-    <div
-      className={cn(
-        'flex flex-col gap-2 rounded-2xl py-[var(--spacing-24-duplicate)] px-[var(--spacing-24-duplicate)]',
-        bg_color,
-        'w-[41.25rem] shadow-md'
-      )}
-    >
+    <Card className={'w-[41.25rem]'} isLight={isLight}>
       <Filters isLight={isLight} />
       <DataLineChart data={data} />
-    </div>
+    </Card>
   );
 }
