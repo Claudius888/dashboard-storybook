@@ -1,55 +1,54 @@
 import React from 'react';
 
-import { Button } from './Button';
 import './header.css';
+import Sidebar from './assets/ui-icons/Sidebar.svg';
+import Star from './assets/ui-icons/Star.svg';
+import SearchIcon from './assets/ui-icons/Search.svg';
+import CommandIcon from './assets/ui-icons/Command.svg';
+import ThemeIcon from './assets/ui-icons/Sun.svg';
+import NotificationIcon from './assets/ui-icons/Bell.svg';
+import ActivityIcon from './assets/ui-icons/ClockCounterClockwise.svg';
 
 type User = {
   name: string;
 };
 
-export interface HeaderProps {
-  user?: User;
-  onLogin?: () => void;
-  onLogout?: () => void;
-  onCreateAccount?: () => void;
+export interface HeaderProps {}
+
+function BreadCrumbs() {
+  return <span>Dashboards / Default</span>;
 }
 
-export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
-  <header>
-    <div className="storybook-header">
-      <div>
-        <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-          <g fill="none" fillRule="evenodd">
-            <path
-              d="M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z"
-              fill="#FFF"
-            />
-            <path
-              d="M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z"
-              fill="#555AB9"
-            />
-            <path
-              d="M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z"
-              fill="#91BAF8"
-            />
-          </g>
-        </svg>
-        <h1>Acme</h1>
+function Searchbar() {
+  return (
+    <div className='relative w-[10rem] overflow-hidden'>
+      <img src={SearchIcon} className='absolute left-[0.25rem] top-1/4' />
+      <input
+        placeholder='Search'
+        className='pl-6 rounded-lg w-[10rem] h-7 text-sm text-themes-black-40 placeholder-themes-black-40'
+      />
+      <img src={CommandIcon} className='absolute right-[0.5rem] top-1/4' />
+    </div>
+  );
+}
+
+export const Header = () => (
+  <header className=''>
+    <div
+      className='flex flex-row items-center justify-between 
+    w-[59.25rem] h-[4.25rem] border border-themes-black-40 px-8 '
+    >
+      <div className='flex flex-row gap-5'>
+        <img src={Sidebar} />
+        <img src={Star} />
+        <BreadCrumbs />
       </div>
-      <div>
-        {user ? (
-          <>
-            <span className="welcome">
-              Welcome, <b>{user.name}</b>!
-            </span>
-            <Button size="small" onClick={onLogout} label="Log out" />
-          </>
-        ) : (
-          <>
-            <Button size="small" onClick={onLogin} label="Log in" />
-            <Button primary size="small" onClick={onCreateAccount} label="Sign up" />
-          </>
-        )}
+      <div className='flex flex-row gap-[1rem]'>
+        <Searchbar />
+        <img src={ThemeIcon} />
+        <img src={ActivityIcon} />
+        <img src={NotificationIcon} />
+        <img src={Sidebar} />
       </div>
     </div>
   </header>
