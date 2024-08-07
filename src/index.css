@@ -86,8 +86,26 @@
   --themes-white-100: rgba(255, 255, 255, 1);
   --themes-white-40: rgba(255, 255, 255, 0.4);
   --white-100: rgba(255, 255, 255, 1);
-  --themes-card-dark: "#272727";
+  --themes-dark-card: rgb(39, 39, 39);
 }
+
+@layer utilities{
+  .theme-svg {
+  @apply fill-themes-black-100 dark:fill-themes-white-100
+  }
+  .theme-text {
+    @apply text-themes-black-100 dark:text-themes-white-100
+    
+  }
+  .theme-card {
+    @apply bg-themes-primary-light dark:bg-themes-dark-card
+  }
+  .theme-bg {
+    @apply bg-themes-white-100 dark:bg-themes-black-100
+  }
+}
+
+
 
 a {
   font-weight: 500;

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { ListItemWrapper } from './ListItemWrapper';
+import { ListItemWrapper } from '../components/ListItemWrapper';
 import { Bug } from '../ui/Bug';
 import { Broadcast } from '../ui/Broadcast';
 

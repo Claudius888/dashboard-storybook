@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 
-import { StatCard } from './StatCard';
+import { StatCard } from '../components/StatCard';
 
 const meta = {
-  title: 'Example/StatCard',
+  title: 'Components/StatCard',
   component: StatCard,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { DevicesStatChart } from './DevicesStatChart';
+import { DevicesStatChart } from '../components/DevicesStatChart';
 
 
 const data = [

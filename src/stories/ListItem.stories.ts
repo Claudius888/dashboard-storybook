@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { ListItem } from './ListItem';
+import { ListItem } from '../components/ListItem';
 import { Bug } from '../ui/Bug';
 
 

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { LocationStatChart } from './LocationStatChart';
+import { LocationStatChart } from '../components/LocationStatChart';
 
 
 const data = [
