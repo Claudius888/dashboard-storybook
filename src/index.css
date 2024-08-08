@@ -86,26 +86,57 @@
   --themes-white-100: rgba(255, 255, 255, 1);
   --themes-white-40: rgba(255, 255, 255, 0.4);
   --white-100: rgba(255, 255, 255, 1);
+  --sidebar-selected: rgb(234, 234, 234);
   --themes-dark-card: rgb(39, 39, 39);
+  --themes-light-muted-bg: rgb(246, 246, 246);
+  --themes-dark-muted-bg: rgb(42, 42, 42);
+  --theme-black-gradient: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(255, 255, 255, 0.24) 100%
+    ),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #000000;
+  --theme-primary-gradient: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.4) 100%
+    ),
+    #007aff;
 }
 
-@layer utilities{
+@layer utilities {
   .theme-svg {
-  @apply fill-themes-black-100 dark:fill-themes-white-100
+    @apply fill-themes-black-100 dark:fill-themes-white-100;
   }
   .theme-text {
-    @apply text-themes-black-100 dark:text-themes-white-100
-    
+    @apply text-themes-black-100 dark:text-themes-white-100;
   }
   .theme-card {
-    @apply bg-themes-primary-light dark:bg-themes-dark-card
+    @apply bg-themes-primary-light dark:bg-themes-dark-card;
   }
   .theme-bg {
-    @apply bg-themes-white-100 dark:bg-themes-black-100
+    @apply bg-themes-white-100 dark:bg-themes-black-100;
+  }
+
+  .theme-muted-bg {
+    @apply bg-themes-light-muted-bg dark:bg-themes-dark-muted-bg
+  }
+
+  .section-title {
+    @apply text-sm font-medium;
+  }
+  /* .theme-primary-gradient {
+    @apply bg-gradient-to-r from-indigo-500 to-blue-500;
+  } */
+  .theme-primary-gradient {
+    background: var(--theme-primary-gradient);
+    background-blend-mode: normal, overlay, multiply;
+  }
+  .theme-black-gradient {
+    background: var(--theme-black-gradient);
+    background-blend-mode: normal, overlay, multiply;
   }
 }
-
-
 
 a {
   font-weight: 500;

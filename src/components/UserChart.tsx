@@ -76,7 +76,7 @@ function DataLineChart({ data }: { data: dataProps }) {
   return (
     <ResponsiveContainer
       width='100%'
-      height={400}
+      height={'100%'}
       className={'mt-3 text-xs text-themes-black-40'}
     >
       <LineChart data={data} margin={{ left: 0, bottom: 0 }}>
@@ -112,7 +112,7 @@ export function UserChart({ backgroundColor, data }: UserChartProps) {
   const isLight = backgroundColor == 'light';
 
   return (
-    <Card className={'w-[41.25rem]'} isLight={isLight}>
+    <Card className={'min-w-[41.25rem] w-full h-[20.6rem]'} isLight={isLight}>
       <Filters isLight={isLight} />
       <DataLineChart data={data} />
     </Card>

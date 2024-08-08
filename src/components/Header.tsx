@@ -25,27 +25,27 @@ function Searchbar() {
   );
 }
 
-export const Header = () => {
+export const Header = ({cycleOpen, minimal=false, setDark}: {cycleOpen?: () => void, minimal?: boolean, setDark: () => void}) => {
   const dark_classname = 'theme-svg'
   return (
   <header className=''>
+    {/* w-[63.9rem]  */}
     <div
-      className='flex flex-row items-center justify-between 
-    w-[59.25rem] h-[4.25rem] border border-themes-black-40 px-8 
-    theme-text theme-bg
-    '
+      className={cn('flex flex-row items-center justify-between w-full h-[4.25rem] max-w-full px-8 theme-text theme-bg',
+        !minimal && 'border-b border-themes-black-40'
+      )}
     >
       <div className='flex flex-row gap-5'>
-        <Icons.Sidebar className={dark_classname}/>
+        <Icons.Sidebar className={dark_classname} onClick={cycleOpen}/>
         <Icons.Star className={dark_classname}/>
         <BreadCrumbs />
       </div>
       <div className='flex flex-row gap-[1rem]'>
         <Searchbar />
-        <Icons.Sun className={dark_classname}/>
+        <Icons.Sun className={dark_classname} onClick={() => setDark()}/>
         <Icons.ClockCounterClockwise className={dark_classname}/>
         <Icons.Bell className={dark_classname}/>
-        <Icons.Sidebar className={dark_classname}/>
+        {!minimal && <Icons.Sidebar className={dark_classname}/>}
       </div>
     </div>
   </header>

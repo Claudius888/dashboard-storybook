@@ -10,7 +10,7 @@ import {
 } from 'recharts';
 
 export interface DeviceStatChartProps {
-  backgroundColor: 'light' | 'dark';
+  backgroundColor?: 'light' | 'dark';
   data: dataProps;
 }
 
@@ -22,11 +22,11 @@ export function DevicesStatChart({
     <Card
       isLight={backgroundColor == 'light'}
       title='Traffic by Device'
-      className='w-[27rem]'
+      className='min-w-[27rem] w-full h-[17.6rem]'
     >
       <ResponsiveContainer
-        width={'100%'}
-        height={200}
+        width='100%'
+        height='100%'
         className={'mt-3 text-xs text-themes-black-40'}
       >
         <BarChart width={200} height={40} data={data} margin={{ left: 0 }}>

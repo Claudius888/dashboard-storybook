@@ -19,7 +19,7 @@ const COLORS = [
 ];
 
 export interface LocationStatChartProps {
-  backgroundColor: 'light' | 'dark';
+  backgroundColor?: 'light' | 'dark';
   data: dataProps;
 }
 
@@ -61,7 +61,7 @@ export function LocationStatChart({
 
   return (
     <Card
-      className='w-[27rem] h-[17.5rem]'
+      className='min-w-[27rem] w-full h-[17.5rem]'
       isLight={isLight}
       title='Traffic by Location'
     >
