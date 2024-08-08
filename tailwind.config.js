@@ -24,6 +24,11 @@ export default {
         'themes-white-40': 'var(--themes-white-40)',
         'white-100': 'var(--white-100)',
         'themes-dark-card': 'var(--themes-dark-card)',
+        'themes-primary-gradient': 'var(--theme-primary-gradient)',
+        'themes-black-gradient': 'var(--theme-black-gradient)',
+        'themes-light-muted-bg': 'var(--themes-light-muted-bg)', 
+        'themes-dark-muted-bg': 'var(--themes-dark-muted-bg)',
+        'sidebar-selected-bg': 'var(--sidebar-selected)'
       },
       fontFamily: {
         '12-regular': 'var(--12-regular-font-family)',

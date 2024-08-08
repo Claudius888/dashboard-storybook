@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Sidebar } from '../components/Sidebar';
 
 const meta = {
-  title: 'Example/Sidebar',
+  title: 'Components/Sidebar',
   component: Sidebar,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
@@ -17,14 +17,14 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Dark: Story = {
+export const AccordionSidebar: Story = {
   args: {
     backgroundColor: 'dark'
   },
 };
 
-export const Light: Story = {
-  args: {
-    backgroundColor: 'light'
-  },
-};
+// export const Light: Story = {
+//   args: {
+//     backgroundColor: 'light'
+//   },
+// };

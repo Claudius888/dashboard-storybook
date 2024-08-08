@@ -3,12 +3,14 @@ import { cn } from '../lib/utils';
 import { useEffect } from 'react';
 import { Icons } from './Icons';
 import { LucideProps } from 'lucide-react';
+import { classnameProp } from '../lib/types';
 
 export interface AccordionProps {
   i: number | false;
   expanded: number | false;
   setExpanded: (isOpen: number | false) => void;
   item: ItemProps;
+  story?: boolean;
 }
 
 interface ItemProps {
@@ -30,7 +32,7 @@ function Listitem({ item, isOpen }: { item: ItemProps; isOpen: boolean }) {
     <div
       ref={scope}
       className={cn(
-        'flex flex-row gap-2 w-[15.5rem] bg-transparent',
+        'flex flex-row gap-2 w-full bg-transparent',
         'text-themes-black-100 dark:text-themes-white-100',
         'h-10 items-center'
       )}
@@ -49,7 +51,7 @@ function Listitem({ item, isOpen }: { item: ItemProps; isOpen: boolean }) {
 
 const staggerMenuItems = stagger(0.1, { startDelay: 0.15 });
 
-function AccordionBody({ item, isOpen }: { item: ItemProps; isOpen: boolean }) {
+function AccordionBody({ item, isOpen, story }: { item: ItemProps; isOpen: boolean, story: boolean }) {
   const [scope, animate] = useAnimate();
 
   useEffect(() => {
@@ -95,7 +97,7 @@ function AccordionBody({ item, isOpen }: { item: ItemProps; isOpen: boolean }) {
     <AnimatePresence>
       <motion.div layout ref={scope}>
         <ul
-          className='flex flex-col gap-3'
+          className={cn('flex flex-col gap-3 theme-text', story ? 'theme-bg' : '')}
           style={{
             pointerEvents: isOpen ? 'auto' : 'none',
             clipPath: 'inset(10% 50% 90% 50% round 10px)',
@@ -122,6 +124,7 @@ export const Accordion = ({
   expanded,
   setExpanded,
   item,
+  story
 }: AccordionProps) => {
   const isOpen = i === expanded;
 
@@ -136,11 +139,12 @@ export const Accordion = ({
         initial={false}
         // animate={{ backgroundColor: isOpen ? '#FF0088' : '#0055FF' }}
         onClick={() => setExpanded(isOpen ? false : i)}
+        className={story ? 'theme-bg' : ''}
       >
-        <Listitem item={item} isOpen={isOpen} />
+        <Listitem item={item} isOpen={isOpen}/>
       </motion.header>
 
-      <AccordionBody item={item} isOpen={isOpen} />
+      <AccordionBody item={item} isOpen={isOpen} story={story}/>
     </>
   );
 };

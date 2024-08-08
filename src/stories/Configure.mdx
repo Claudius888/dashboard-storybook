@@ -31,13 +31,16 @@ export const RightArrow = () => <svg
   <path d="m11.1 7.35-5.5 5.5a.5.5 0 0 1-.7-.7L10.04 7 4.9 1.85a.5.5 0 1 1 .7-.7l5.5 5.5c.2.2.2.5 0 .7Z" />
 </svg>
 
-<Meta title="Configure your project" />
+<Meta title="About the Project" />
 
 <div className="sb-container">
   <div className='sb-section-title'>
-    # Configure your project
+    # Dashboard Overview Page
 
-    Because Storybook works separately from your app, you'll need to configure it for your specific stack and setup. Below, explore guides for configuring Storybook with popular frameworks and tools. If you get stuck, learn how you can ask for help from our community.
+    I'm exploring Storybook how it works separately from your app and maintain the atomicity of your UI components, I've been coding a dashbord design from 
+    <a href='https://www.figma.com/design/JNnHGG2nFH5QQGvjvUVctM/Dashboard-UI-Kit---Dashboard-(Community)?node-id=19588-15681&t=QduSoKnbZaLv5eT4-0'>figma courtesy of SNOWUI</a> 
+    from the get go it encourages to singleton components with a focus on animation based on components 
+    where each components animation state can be built step by step (Eg. Overview Page (Sidebar)).
   </div>
   <div className="sb-section">
     <div className="sb-section-item">
@@ -45,41 +48,39 @@ export const RightArrow = () => <svg
         src={Styling}
         alt="A wall of logos representing different styling technologies"
       />
-      <h4 className="sb-section-item-heading">Add styling and CSS</h4>
-      <p className="sb-section-item-paragraph">Like with web applications, there are many ways to include CSS within Storybook. Learn more about setting up styling within Storybook.</p>
-      <a
+      <h4 className="sb-section-item-heading">Dark mode Tailwind</h4>
+      <p className="sb-section-item-paragraph">Using the dark class from tailwind. Easier to implement the theme swiches. So All components have a dark switch</p>
+      {/* <a
         href="https://storybook.js.org/docs/configure/styling-and-css/?renderer=react"
         target="_blank"
-      >Learn more<RightArrow /></a>
+      >Learn more<RightArrow /></a> */}
     </div>
     <div className="sb-section-item">
       <img
         src={Context}
         alt="An abstraction representing the composition of data for a component"
       />
-      <h4 className="sb-section-item-heading">Provide context and mocking</h4>
-      <p className="sb-section-item-paragraph">Often when a story doesn't render, it's because your component is expecting a specific environment or context (like a theme provider) to be available.</p>
-      <a
+      <h4 className="sb-section-item-heading">UI Components with TypeScript</h4>
+      <p className="sb-section-item-paragraph">Great support for TypeScript, with ability to export props for each Component as Types or interfaces</p>
+      {/* <a
         href="https://storybook.js.org/docs/writing-stories/decorators/?renderer=react#context-for-mocking"
         target="_blank"
-      >Learn more<RightArrow /></a>
+      >Learn more<RightArrow /></a> */}
     </div>
     <div className="sb-section-item">
       <img src={Assets} alt="A representation of typography and image assets" />
       <div>
-        <h4 className="sb-section-item-heading">Load assets and resources</h4>
-        <p className="sb-section-item-paragraph">To link static files (like fonts) to your projects and stories, use the
-        `staticDirs` configuration option to specify folders to load when
-        starting Storybook.</p>
-        <a
+        <h4 className="sb-section-item-heading">Animations</h4>
+        <p className="sb-section-item-paragraph">Using Framer Motion for Animations in Accordion , Sidebar , OverviewPage</p>
+        {/* <a
           href="https://storybook.js.org/docs/configure/images-and-assets/?renderer=react"
           target="_blank"
-        >Learn more<RightArrow /></a>
+        >Learn more<RightArrow /></a> */}
       </div>
     </div>
   </div>
 </div>
-<div className="sb-container">
+{/* <div className="sb-container">
   <div className='sb-section-title'>
     # Do more with Storybook
 
@@ -147,8 +148,8 @@ export const RightArrow = () => <svg
       </div>
     </div>
   </div>
-</div>
-<div className='sb-addon'>
+</div> */}
+{/* <div className='sb-addon'>
   <div className='sb-addon-text'>
     <h4>Addons</h4>
     <p className="sb-section-item-paragraph">Integrate your tools with Storybook to connect workflows.</p>
@@ -160,48 +161,28 @@ export const RightArrow = () => <svg
   <div className='sb-addon-img'>
     <img src={AddonLibrary} alt="Integrate your tools with Storybook to connect workflows." />
   </div>
-</div>
+</div> */}
 
 <div className="sb-section sb-socials">
     <div className="sb-section-item">
       <img src={Github} alt="Github logo" className="sb-explore-image"/>
-      Join our contributors building the future of UI development.
+      Checkout my Github Repo for more projects
 
       <a
-        href="https://github.com/storybookjs/storybook"
+        href=""
         target="_blank"
       >Star on GitHub<RightArrow /></a>
     </div>
     <div className="sb-section-item">
       <img src={Discord} alt="Discord logo" className="sb-explore-image"/>
       <div>
-        Get support and chat with frontend developers.
+        Get in touch on discord
 
         <a
-          href="https://discord.gg/storybook"
+          href="https://discord.com/users/claudius2720"
           target="_blank"
         >Join Discord server<RightArrow /></a>
       </div>
-    </div>
-    <div className="sb-section-item">
-      <img src={Youtube} alt="Youtube logo" className="sb-explore-image"/>
-      <div>
-        Watch tutorials, feature previews and interviews.
-
-        <a
-          href="https://www.youtube.com/@chromaticui"
-          target="_blank"
-        >Watch on YouTube<RightArrow /></a>
-      </div>
-    </div>
-    <div className="sb-section-item">
-      <img src={Tutorials} alt="A book" className="sb-explore-image"/>
-      <p>Follow guided walkthroughs on for key workflows.</p>
-
-      <a
-          href="https://storybook.js.org/tutorials/"
-          target="_blank"
-        >Discover tutorials<RightArrow /></a>
     </div>
 </div>
 
@@ -362,3 +343,24 @@ export const RightArrow = () => <svg
   }
   `}
 </style>
+{/* 
+<div className="sb-section-item">
+      <img src={Youtube} alt="Youtube logo" className="sb-explore-image"/>
+      <div>
+        Watch tutorials, feature previews and interviews.
+
+        <a
+          href="https://www.youtube.com/@chromaticui"
+          target="_blank"
+        >Watch on YouTube<RightArrow /></a>
+      </div>
+    </div>
+    <div className="sb-section-item">
+      <img src={Tutorials} alt="A book" className="sb-explore-image"/>
+      <p>Follow guided walkthroughs on for key workflows.</p>
+
+      <a
+          href="https://storybook.js.org/tutorials/"
+          target="_blank"
+        >Discover tutorials<RightArrow /></a>
+    </div> */}

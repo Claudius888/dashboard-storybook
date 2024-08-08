@@ -6,7 +6,7 @@ import { Accordion } from './Accordion';
 import { Icons } from './Icons';
 
 export interface SidebarProps {
-  backgroundColor: 'light' | 'dark';
+  backgroundColor?: 'light' | 'dark';
 }
 
 type filter = 'Favourites' | 'Recently' | string;
@@ -112,7 +112,7 @@ function OverviewBlock() {
 
   return (
     <div className='relative gap-1 pb-[var(--spacing-12)]'>
-      <p>Dashboard</p>
+      <p className='section-title theme-text'>Dashboard</p>
       <span className='flex flex-row gap-1 items-center justify-center bg-themes-black-10 dark:bg-themes-black-40 
       text-themes-black-100 dark:text-themes-white-100 text-sm font-medium
        rounded-xl mt-2 p-1'>
@@ -139,7 +139,7 @@ function PagesBlock() {
 
   return (
     <div className='flex flex-col'>
-      <p>Pages</p>
+      <p className='section-title theme-text'>Pages</p>
       {pagesBlockAccordion.map((item, index) => {
         return (
           <Accordion
@@ -158,7 +158,8 @@ function PagesBlock() {
 export function Sidebar({ backgroundColor }: SidebarProps) {
   const isLight = backgroundColor == 'light';
   return (
-    <div className='w-[13.25rem] px-[var(--spacing-16)] bg-themes-white-100 dark:bg-themes-black-100'>
+    <div className='w-[13.25rem] max-h-full px-[var(--spacing-16)] 
+    theme-bg border-r border-themes-black-40 pt-3'>
       <Userblock isLight={isLight} />
       <OverviewBlock />
       <PagesBlock />

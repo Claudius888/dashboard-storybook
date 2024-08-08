@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 
-import { StatCard, StatCardProps, statItem } from '../components/StatCard';
+import { GradientStatCard, statItem } from '../components/GradientStatCard';
 
 const meta = {
-  title: 'Components/StatCard',
-  component: StatCard,
+  title: 'Components/GradientStatCard',
+  component: GradientStatCard,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
   parameters: {
@@ -15,7 +15,7 @@ const meta = {
   args: {
     onClick: fn(),
   },
-} satisfies Meta<typeof StatCard>;
+} satisfies Meta<typeof GradientStatCard>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

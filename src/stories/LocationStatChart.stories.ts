@@ -26,16 +26,9 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Dark: Story = {
+export const LocationChart: Story = {
   args: {
     backgroundColor: 'dark',
-    data:data
-  },
-};
-
-export const Light: Story = {
-  args: {
-    backgroundColor: 'light',
     data:data
   },
 };

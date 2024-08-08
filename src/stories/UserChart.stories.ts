@@ -49,7 +49,7 @@ const data = [
 ];
 
 const meta = {
-  title: 'Example/UserChart',
+  title: 'Components/UserChart',
   component: UserChart,
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
@@ -65,16 +65,16 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Dark: Story = {
+export const Chart: Story = {
   args: {
     backgroundColor: 'dark',
     data: data
   },
 };
 
-export const Light: Story = {
-  args: {
-    backgroundColor: 'light',
-    data: data
-  },
-};
+// export const Light: Story = {
+//   args: {
+//     backgroundColor: 'light',
+//     data: data
+//   },
+// };

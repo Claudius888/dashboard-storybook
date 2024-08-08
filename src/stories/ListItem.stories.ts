@@ -28,13 +28,11 @@ const data = {
 export const Dark: Story = {
   args: {
     item: data,
-    isLight: false
   },
 };
 
 export const Light: Story = {
   args: {
     item: data,
-    isLight: true
   },
 };

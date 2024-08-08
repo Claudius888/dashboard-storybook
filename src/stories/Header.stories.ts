@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Header } from '../components/Header';
+import { fn } from '@storybook/test';
 
 const meta = {
   title: 'Example/Header',
@@ -11,7 +12,7 @@ const meta = {
     layout: 'centered',
   },
   args: {
-
+    setDark: fn()
   },
 } satisfies Meta<typeof Header>;
 
@@ -20,7 +21,7 @@ type Story = StoryObj<typeof meta>;
 
 export const LoggedIn: Story = {
   args: {
+    
   },
 };
 
-// export const LoggedOut: Story = {};
