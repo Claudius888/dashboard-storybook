@@ -3,7 +3,6 @@ import { cn } from '../lib/utils';
 import { useEffect } from 'react';
 import { Icons } from './Icons';
 import { LucideProps } from 'lucide-react';
-import { classnameProp } from '../lib/types';
 
 export interface AccordionProps {
   i: number | false;

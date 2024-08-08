@@ -25,7 +25,7 @@ function Searchbar() {
   );
 }
 
-export const Header = ({cycleOpen, minimal=false, setDark}: {cycleOpen?: () => void, minimal?: boolean, setDark: () => void}) => {
+export const Header = ({cycleOpen, minimal=false, setDark}: {cycleOpen?: () => void, minimal?: boolean, setDark?: () => void}) => {
   const dark_classname = 'theme-svg'
   return (
   <header className=''>
@@ -36,7 +36,7 @@ export const Header = ({cycleOpen, minimal=false, setDark}: {cycleOpen?: () => v
       )}
     >
       <div className='flex flex-row gap-5'>
-        <Icons.Sidebar className={dark_classname} onClick={cycleOpen}/>
+        <Icons.Sidebar aria-label='sidebar-btn' className={cn('sidebar-btn',dark_classname)} onClick={cycleOpen}/>
         <Icons.Star className={dark_classname}/>
         <BreadCrumbs />
       </div>

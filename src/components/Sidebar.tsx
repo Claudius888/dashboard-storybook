@@ -15,7 +15,7 @@ const userblockAccordion = [
   {
     title: 'ECommerce',
     Icon: Icons.Bag,
-    children: ['Overview', 'Projects', 'Campaign', 'Documents', 'Followers'],
+    children: ['Overview1', 'Projects1', 'Campaign1', 'Documents1', 'Followers'],
   },
   {
     title: 'Projects',
